@@ -1,0 +1,2 @@
+include ':wrapper'
+project(':wrapper').projectDir = new File('../../../ns-datadome-android/wrapper')

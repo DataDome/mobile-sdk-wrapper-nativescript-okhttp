@@ -1,4 +1,5 @@
 import { Observable } from '@nativescript/core'
+declare const co: any
 
 export class HelloWorldModel extends Observable {
   private _counter: number
@@ -25,6 +26,7 @@ export class HelloWorldModel extends Observable {
 
   onTap() {
     // TODO send request
+    const dataDomeSDK = new co.datadome.ns.wrapper.DataDomeSDK();
   }
 
   private updateMessage() {
