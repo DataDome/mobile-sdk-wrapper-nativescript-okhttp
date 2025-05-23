@@ -2,6 +2,7 @@
 dependencies {
   implementation 'androidx.multidex:multidex:2.0.1'
   implementation project(":wrapper")
+  implementation 'co.datadome.sdk:sdk:1.15.3'
 }
 
 android {

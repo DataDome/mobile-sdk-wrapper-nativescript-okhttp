@@ -26,9 +26,31 @@ export class HelloWorldModel extends Observable {
     }
   }
 
-  onTap() {
-    // TODO send request
-    
+  sendRequest() {
+    const completionHandler = new co.datadome.ns.wrapper.DataDomeSDKWrapper.CompletionHandler({
+        onSuccess(response: string) {
+        console.log("✅ Request succeeded:", response)
+        this.message = response
+      },
+        onError(error: string) {
+        console.error("❌ Request failed:", error)
+      }
+    })
+
+    const headers = new java.util.HashMap()
+    headers.put("User-Agent", "BLOCKUA")
+    headers.put("Accept", "application/json")
+
+    const body = JSON.stringify({
+      techno: "Nativescript",
+      role: "wrapper"
+    });
+
+    this.dataDomeSDKWrapper.makeRequest("post", "https://fastly.datashield.co", headers, body, completionHandler)
+  }
+
+  clearCookie() {
+    this.dataDomeSDKWrapper.clearDataDomeCookie()
   }
 
   private updateMessage() {
