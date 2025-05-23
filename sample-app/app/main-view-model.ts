@@ -1,16 +1,18 @@
 import { Observable } from '@nativescript/core'
+const coreApplication = require("@nativescript/core/application");
 declare const co: any
 
 export class HelloWorldModel extends Observable {
-  private _counter: number
   private _message: string
+
+  private dataDomeSDKWrapper: any
 
   constructor() {
     super()
-
-    // Initialize default values.
-    this._counter = 42
     this.updateMessage()
+
+    let androidApp = coreApplication.android.context
+    this.dataDomeSDKWrapper = new co.datadome.ns.wrapper.DataDomeSDKWrapper(androidApp, "key", "1.0.0", true)
   }
 
   get message(): string {
@@ -26,7 +28,7 @@ export class HelloWorldModel extends Observable {
 
   onTap() {
     // TODO send request
-    const dataDomeSDK = new co.datadome.ns.wrapper.DataDomeSDK();
+    
   }
 
   private updateMessage() {
