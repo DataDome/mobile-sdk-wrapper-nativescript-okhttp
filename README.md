@@ -59,7 +59,7 @@ Make sure to replace 1.15.3 with the latest version of the DataDome SDK if neces
 If you prefer not to include the entire module, you can copy the Kotlin wrapper file manually into your project.
 
 - Download the Kotlin wrapper file from the following path in this repository:
-[DatadomeWrapper.kt](https://github.com/DataDome/mobile-sdk-wrapper-nativescript-okhttp/blob/feat/INT-5072-add-wrapper/ns-datadome-android/wrapper/src/main/java/co/datadome/ns/wrapper/DataDomeSDKWrapper.kt)
+[DatadomeWrapper.kt](https://github.com/DataDome/mobile-sdk-wrapper-nativescript-okhttp/blob/master/ns-datadome-android/wrapper/src/main/java/co/datadome/ns/wrapper/DataDomeSDKWrapper.kt)
 
 - Paste it into your NativeScript app's App_Resources/Android source folder:
 ```bash

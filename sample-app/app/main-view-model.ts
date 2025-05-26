@@ -46,7 +46,7 @@ export class HelloWorldModel extends Observable {
       role: "wrapper"
     });
 
-    this.dataDomeSDKWrapper.makeRequest("post", "https://fastly.datashield.co", headers, body, completionHandler)
+    this.dataDomeSDKWrapper.makeRequest("post", "YOUR_ENDPOINT", headers, body, completionHandler)
   }
 
   clearCookie() {
