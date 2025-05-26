@@ -20,6 +20,9 @@ yarn-error.log*
 tmp/
 typings/
 
+# Android
+.gradle
+
 # Visual Studio Code
 .vscode/*
 !.vscode/settings.json
